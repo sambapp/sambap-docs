@@ -9,6 +9,11 @@
   --app-fan: #0000cd;
   --app-artist: #710d71;
   --app-space: #2563eb;
+
+  /* Cores dos guias — iguais ao accent de cada guia (guia-fa.html, guia-artista.html, guia-espaco.html) */
+  --guide-fa: #e8590c;
+  --guide-artista: #9333ea;
+  --guide-espaco: #2563eb;
   
   --bg: #f8fafc;
   --bg-gradient: radial-gradient(circle at top right, #ffedd5 0%, #f8fafc 40%);
