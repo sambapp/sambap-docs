@@ -1,0 +1,328 @@
+<title>Guia do Artista</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf9fc;
+    --surface:#ffffff;
+    --surface-2:#f1ecf7;
+    --ink:#201c28;
+    --ink-soft:#3c3548;
+    --muted:#736c80;
+    --border:#e2dcec;
+    --accent:#9333ea;
+    --accent-ink:#faf5ff;
+    --accent-wash:#f2e8fd;
+    --good:#1a7a4c;
+    --shadow: 0 1px 2px rgba(32,28,40,.04), 0 8px 24px -12px rgba(32,28,40,.2);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141019;
+      --surface:#1c1624;
+      --surface-2:#241d2e;
+      --ink:#f2eef8;
+      --ink-soft:#d7cee4;
+      --muted:#a89bb8;
+      --border:#332a42;
+      --accent:#bd7ef2;
+      --accent-ink:#20102c;
+      --accent-wash:#2c1f3d;
+      --good:#4fd190;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141019;
+    --surface:#1c1624;
+    --surface-2:#241d2e;
+    --ink:#f2eef8;
+    --ink-soft:#d7cee4;
+    --muted:#a89bb8;
+    --border:#332a42;
+    --accent:#bd7ef2;
+    --accent-ink:#20102c;
+    --accent-wash:#2c1f3d;
+    --good:#4fd190;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+    line-height:1.6;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3,.stub-corner,.toc-title,nav a,.badge,.plan-name,.role-chip{
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+  }
+  h1,h2,h3{ text-wrap:balance; color:var(--ink); }
+  code,.mono,.price,.step-num,td.num,th.num{
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  a{ color:var(--accent); }
+  ::selection{ background:var(--accent-wash); }
+
+  .page{ max-width:1180px; margin:0 auto; padding:0 20px 80px; }
+
+  .cover{ padding:56px 4px 28px; position:relative; }
+  .stub-corner{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--accent); background:var(--accent-wash);
+    border:1px solid var(--accent);
+    padding:5px 10px 5px 8px; border-radius:999px;
+  }
+  .stub-corner .dot{ width:6px; height:6px; border-radius:50%; background:var(--accent); }
+  .cover h1{ margin:18px 0 10px; font-size:clamp(2.4rem, 5vw, 3.4rem); font-weight:800; letter-spacing:-.01em; }
+  .cover .tagline{ max-width:62ch; font-size:1.15rem; color:var(--ink-soft); margin:0 0 22px; }
+  .cover-facts{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:1px; background:var(--border); border:1px solid var(--border);
+    border-radius:10px; overflow:hidden;
+  }
+  .cover-facts div{ background:var(--surface); padding:13px 16px; }
+  .cover-facts .k{ font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-family:"Archivo",sans-serif; font-weight:700; }
+  .cover-facts .v{ font-size:14.5px; margin-top:3px; font-family:"Archivo",sans-serif; font-weight:500; }
+
+  .perf{
+    height:26px; margin:6px 0 8px; position:relative;
+    background-image: radial-gradient(circle at 0 50%, transparent 9px, var(--bg) 9.5px),
+                       radial-gradient(circle at 100% 50%, transparent 9px, var(--bg) 9.5px);
+    background-size: 50% 100%, 50% 100%;
+    background-position: left, right;
+    background-repeat:no-repeat;
+  }
+  .perf::before{ content:""; position:absolute; left:18px; right:18px; top:50%; border-top:2px dashed var(--border); }
+
+  .layout{ display:grid; grid-template-columns:220px 1fr; gap:44px; align-items:start; }
+  @media (max-width:860px){ .layout{ grid-template-columns:1fr; } }
+
+  nav.toc{ position:sticky; top:16px; align-self:start; display:flex; flex-direction:column; gap:2px; padding:14px 6px; border-right:1px solid var(--border); }
+  @media (max-width:860px){
+    nav.toc{ position:sticky; top:0; z-index:5; background:var(--bg); flex-direction:row; overflow-x:auto; border-right:none; border-bottom:1px solid var(--border); padding:10px 4px; gap:6px; margin-bottom:8px; }
+  }
+  .toc-title{ font-size:10.5px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); font-weight:700; padding:4px 10px 10px; }
+  @media (max-width:860px){ .toc-title{ display:none; } }
+  nav.toc a{ text-decoration:none; color:var(--ink-soft); font-size:13.5px; font-weight:500; padding:8px 10px; border-radius:7px; white-space:nowrap; border-left:2px solid transparent; }
+  @media (max-width:860px){ nav.toc a{ border-left:none; border:1px solid var(--border); border-radius:999px; } }
+  nav.toc a:hover{ background:var(--surface-2); color:var(--ink); }
+  nav.toc a.active{ background:var(--accent-wash); color:var(--accent); border-left-color:var(--accent); font-weight:700; }
+
+  main{ min-width:0; }
+  section{ padding:34px 0 6px; border-top:1px solid var(--border); }
+  section:first-of-type{ border-top:none; padding-top:6px; }
+  section h2{ font-size:1.5rem; font-weight:800; margin:0 0 4px; display:flex; align-items:baseline; gap:10px; }
+  section h2 .idx{ color:var(--accent); font-family:"IBM Plex Mono",monospace; font-size:.9rem; font-weight:600; }
+  section > .lede{ color:var(--muted); font-size:.98rem; margin:0 0 20px; max-width:64ch; }
+  section p{ max-width:66ch; }
+  section h3{ font-size:1.05rem; font-weight:700; margin:22px 0 8px; }
+
+  .steps{ counter-reset:step; display:flex; flex-direction:column; gap:14px; margin:18px 0; max-width:70ch; }
+  .step{ display:grid; grid-template-columns:34px 1fr; gap:14px; }
+  .step-num{ counter-increment:step; width:34px; height:34px; border-radius:50%; background:var(--surface-2); border:1px solid var(--border); color:var(--accent); display:flex; align-items:center; justify-content:center; font-weight:600; font-size:13px; }
+  .step-num::before{ content: counter(step); }
+  .step h4{ margin:4px 0 3px; font-family:"Archivo",sans-serif; font-size:.98rem; font-weight:700; }
+  .step p{ margin:0; font-size:.94rem; color:var(--ink-soft); }
+
+  .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; margin:16px 0; }
+  .card{ background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }
+  .card h4{ margin:0 0 6px; font-family:"Archivo",sans-serif; font-size:.92rem; font-weight:700; display:flex; gap:8px; align-items:center; }
+  .card p{ margin:0; font-size:.88rem; color:var(--muted); }
+
+  table{ width:100%; border-collapse:collapse; margin:14px 0; }
+  .table-wrap{ overflow-x:auto; border:1px solid var(--border); border-radius:12px; }
+  th,td{ text-align:left; padding:11px 14px; font-size:.9rem; border-bottom:1px solid var(--border); }
+  thead th{ font-family:"Archivo",sans-serif; font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); background:var(--surface-2); }
+  tbody tr:last-child td{ border-bottom:none; }
+  td.num,th.num{ text-align:right; }
+
+  .plans{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:18px 0; }
+  @media (max-width:560px){ .plans{ grid-template-columns:1fr; } }
+  .plan{ border:1px solid var(--border); border-radius:14px; padding:20px 20px 18px; background:var(--surface); }
+  .plan.highlight{ border-color:var(--accent); box-shadow:var(--shadow); position:relative; }
+  .plan.highlight::before{
+    content:"Recomendado"; position:absolute; top:-11px; left:18px; background:var(--accent); color:var(--accent-ink);
+    font-family:"Archivo",sans-serif; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    padding:4px 10px; border-radius:999px;
+  }
+  .plan-name{ font-size:1.05rem; font-weight:800; }
+  .plan-price{ font-family:"IBM Plex Mono",monospace; font-size:1.7rem; font-weight:600; margin:6px 0 2px; }
+  .plan-price span{ font-size:.85rem; color:var(--muted); font-family:"Archivo",sans-serif; font-weight:500; }
+  .plan ul{ list-style:none; margin:14px 0 0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  .plan li{ font-size:.87rem; padding-left:20px; position:relative; color:var(--ink-soft); }
+  .plan li::before{ content:"✓"; position:absolute; left:0; color:var(--good); font-weight:700; }
+
+  .note{ border-left:3px solid var(--accent); background:var(--accent-wash); padding:12px 16px; border-radius:0 10px 10px 0; font-size:.9rem; max-width:66ch; margin:16px 0; }
+  .note strong{ color:var(--ink); }
+
+  .faq{ display:flex; flex-direction:column; gap:10px; margin:16px 0; max-width:70ch; }
+  .faq details{ border:1px solid var(--border); border-radius:10px; padding:2px 16px; background:var(--surface); }
+  .faq summary{ cursor:pointer; padding:13px 0; font-family:"Archivo",sans-serif; font-weight:700; font-size:.94rem; list-style:none; }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary::after{ content:"+"; float:right; color:var(--accent); font-weight:800; }
+  .faq details[open] summary::after{ content:"–"; }
+  .faq p{ margin:0 0 14px; font-size:.9rem; color:var(--ink-soft); }
+
+  footer.doc-footer{ margin-top:50px; padding:22px 0 4px; border-top:1px solid var(--border); display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; font-size:.82rem; color:var(--muted); }
+  @media (prefers-reduced-motion:no-preference){ html{ scroll-behavior:smooth; } }
+</style>
+
+<div class="page">
+
+  <header class="cover">
+    <span class="stub-corner"><span class="dot"></span>Samba da 1ª · App Artista</span>
+    <h1>Guia do Artista</h1>
+    <p class="tagline">Como divulgar sua agenda, ganhar seguidores e entender o que a plataforma mostra sobre o seu público — do cadastro ao plano Pro.</p>
+    <div class="cover-facts">
+      <div><div class="k">Para quem</div><div class="v">Músicos, bandas e grupos</div></div>
+      <div><div class="k">Cadastro</div><div class="v">Como "Artista", com e-mail ou Google</div></div>
+      <div><div class="k">Plano gratuito</div><div class="v">Até 3 eventos por mês</div></div>
+      <div><div class="k">Este guia cobre</div><div class="v">Eventos, posts, check-in e o plano Pro</div></div>
+    </div>
+  </header>
+
+  <div class="perf"></div>
+
+  <div class="layout">
+    <nav class="toc" id="toc">
+      <div class="toc-title">Neste guia</div>
+      <a href="#cadastro">Criar seu perfil</a>
+      <a href="#eventos">Criar um evento</a>
+      <a href="#posts">Posts e Feed</a>
+      <a href="#limite">Limite mensal</a>
+      <a href="#dashboard">Dashboard do organizador</a>
+      <a href="#checkin">Check-in na entrada</a>
+      <a href="#pro">Plano Pro</a>
+      <a href="#comprar">Indo a outros eventos</a>
+      <a href="#suporte">Suporte</a>
+    </nav>
+
+    <main>
+
+      <section id="cadastro">
+        <h2><span class="idx">01</span>Criar seu perfil de artista</h2>
+        <div class="steps">
+          <div class="step"><div class="step-num"></div><div><h4>Baixe o app Artista</h4><p>Versão própria na Play Store, separada do app do Fã.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Cadastre-se como "Artista"</h4><p>Com e-mail e senha ou com sua conta Google.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Preencha nome artístico e foto</h4><p>É o que os fãs veem ao seguir você e nos cartões de evento.</p></div></div>
+        </div>
+        <p>Seu perfil público mostra nota média (a partir das avaliações que você recebe), total de eventos criados, próximos eventos e total de participantes já reunidos.</p>
+      </section>
+
+      <section id="eventos">
+        <h2><span class="idx">02</span>Criar um evento</h2>
+        <p class="lede">Pelo botão flutuante de criação, na Início ou no Dashboard do organizador.</p>
+        <div class="steps">
+          <div class="step"><div class="step-num"></div><div><h4>Dados básicos</h4><p>Título, data, horário (ou dias recorrentes, se for evento fixo) e gênero — Samba e Pagode em destaque, com outros gêneros disponíveis.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Local</h4><p>Digite o nome do espaço. Se ele já estiver cadastrado no app, o endereço é preenchido sozinho.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Gratuito ou pago</h4><p>Marque se é gratuito ou informe o valor de entrada.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Publique</h4><p>Fãs que seguem você recebem notificação e o evento entra na busca e nas recomendações.</p></div></div>
+        </div>
+        <div class="note"><strong>Quando o local é um espaço cadastrado no app:</strong> seu evento entra como <em>pendente</em> até o dono do espaço aprovar — o endereço e os dados batem com o cadastro dele, então essa confirmação evita divergência entre o que você divulga e o que o espaço tem na agenda.</div>
+        <h3>Sobre vender ingressos</h3>
+        <p>Como artista, seus eventos funcionam com <strong>confirmação de presença</strong> — você informa o valor da entrada, mas a cobrança automática dentro do app (com QR Code de pagamento e crédito direto em conta) é um recurso do plano <strong>Business</strong>, exclusivo dos Espaços. Para vender ingresso com checkout no app, o evento precisa ser realizado num espaço parceiro com plano Business, que configura a venda do lado dele.</p>
+      </section>
+
+      <section id="posts">
+        <h2><span class="idx">03</span>Posts e Feed</h2>
+        <p>Além de eventos, você pode publicar posts com texto, imagem e título no Feed — aparecem para quem te segue e podem entrar nos "Posts em alta" se ganharem engajamento. Fãs curtem, compartilham e podem abrir seu perfil direto do post.</p>
+      </section>
+
+      <section id="limite">
+        <h2><span class="idx">04</span>Limite mensal de eventos</h2>
+        <p>No plano gratuito você cria até <strong>3 eventos por mês</strong>. O Dashboard do organizador mostra um aviso quando você está perto do limite. No plano <strong>Pro</strong>, o limite some — eventos ilimitados.</p>
+      </section>
+
+      <section id="dashboard">
+        <h2><span class="idx">05</span>Dashboard do organizador</h2>
+        <p>Sua central de eventos: total criados, próximos eventos, total de participantes e quantos eventos você já usou do limite do mês. Dali você cria, edita, exclui e abre os detalhes de cada evento.</p>
+      </section>
+
+      <section id="checkin">
+        <h2><span class="idx">06</span>Check-in na entrada</h2>
+        <p>Use o <strong>Scanner de QR Code</strong>, dentro de Tickets, para validar a entrada de quem confirmou presença — aponte a câmera para o QR Code do participante e o check-in é registrado na hora.</p>
+      </section>
+
+      <section id="pro">
+        <h2><span class="idx">07</span>Plano Pro</h2>
+        <p class="lede">Pensado para quem já roda a cidade toda semana e quer decidir com dado, não só com feeling.</p>
+        <div class="plans">
+          <div class="plan">
+            <div class="plan-name">Gratuito</div>
+            <div class="plan-price">R$ 0</div>
+            <ul>
+              <li>Divulgue seus eventos</li>
+              <li>Conecte-se com fãs</li>
+              <li>Até 3 eventos por mês</li>
+              <li>Posts no Feed</li>
+            </ul>
+          </div>
+          <div class="plan highlight">
+            <div class="plan-name">Pro</div>
+            <div class="plan-price">R$ 24<span>,99 / mês</span></div>
+            <ul>
+              <li>Eventos ilimitados</li>
+              <li>Destaque nas buscas para fãs do seu estilo</li>
+              <li>Analytics avançado — idade, gênero e local do público</li>
+              <li>Previsão de público por evento</li>
+              <li>Relatórios de crescimento e ranking por gênero</li>
+              <li>Exportação de dados</li>
+              <li>3 cupons exclusivos por mês para seus fãs</li>
+              <li>Navegação sem anúncios</li>
+            </ul>
+          </div>
+        </div>
+        <div class="note">Assinaturas com período de teste incluem <strong>7 dias grátis</strong> antes da primeira cobrança. Tem um código promocional? Resgate em <strong>Perfil → Código promocional</strong>.</div>
+      </section>
+
+      <section id="comprar">
+        <h2><span class="idx">08</span>Indo a eventos de outros artistas</h2>
+        <p>Sua conta de Artista também compra ingressos normalmente, como um fã — dados de compra, pagamento (PIX, cartão ou boleto) e QR Code funcionam do mesmo jeito, em <strong>Tickets</strong>.</p>
+      </section>
+
+      <section id="suporte">
+        <h2><span class="idx">09</span>Precisa de ajuda?</h2>
+        <p>Abra a aba <strong>Suporte</strong> no app, escolha o assunto e você é encaminhado para o WhatsApp da equipe com uma mensagem já formatada.</p>
+        <div class="cards">
+          <div class="card"><h4>💬 WhatsApp</h4><p><a href="https://wa.me/5513974266175">wa.me/5513974266175</a></p></div>
+          <div class="card"><h4>✉️ E-mail</h4><p><a href="mailto:contato@sambadaprimeira.com.br">contato@sambadaprimeira.com.br</a></p></div>
+        </div>
+        <div class="faq">
+          <details><summary>Meu evento ficou "pendente" e não sai da busca</summary><p>Isso acontece quando você escolhe, no campo Local, um espaço já cadastrado no app — o evento só fica público depois que o dono do espaço aprova. Confirme com o espaço ou combine outro local.</p></details>
+          <details><summary>Posso vender ingresso pago mesmo sem ser num espaço Business?</summary><p>Não pelo checkout do app — hoje essa cobrança automática é exclusiva do plano Business dos Espaços. Você pode divulgar o valor da entrada e cobrar por fora, ou fechar com um espaço parceiro que já venda pelo app.</p></details>
+          <details><summary>Atingi o limite de 3 eventos do mês</summary><p>Você pode assinar o Pro para liberar eventos ilimitados, ou aguardar a virada do mês para o limite gratuito renovar.</p></details>
+        </div>
+      </section>
+
+      <footer class="doc-footer">
+        <span>Samba da 1ª — Guia do Artista</span>
+        <span>Válido para o app Android e a versão web</span>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+    var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+    if(!('IntersectionObserver' in window) || !sections.length) return;
+    var byId = {};
+    links.forEach(function(a){ byId[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          links.forEach(function(a){ a.classList.remove('active'); });
+          var link = byId[entry.target.id];
+          if(link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+    sections.forEach(function(s){ io.observe(s); });
+  })();
+</script>
