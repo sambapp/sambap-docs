@@ -208,6 +208,16 @@
     font-size:.82rem; color:var(--muted);
   }
   @media (prefers-reduced-motion:no-preference){ html{ scroll-behavior:smooth; } }
+
+  .store-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--accent); color:var(--accent-ink);
+    font-family:"Archivo",sans-serif; font-size:13.5px; font-weight:700;
+    padding:10px 18px; border-radius:999px; text-decoration:none;
+    box-shadow:var(--shadow); margin:2px 0 22px;
+  }
+  .store-btn:hover{ opacity:.9; }
+  .store-btn svg{ flex-shrink:0; }
 </style>
 
 <div class="page">
@@ -216,6 +226,10 @@
     <span class="stub-corner"><span class="dot"></span>SAMBAP · App Fã</span>
     <h1>Guia do Fã</h1>
     <p class="tagline">Como usar o app para descobrir rodas, shows e feijoadas de samba e pagode perto de você, seguir seus artistas favoritos e entrar no evento com o ingresso no celular.</p>
+    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.samba.pagode.fan" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3.5v17a.5.5 0 0 0 .82.38l10.36-8.5a.5.5 0 0 0 0-.76L3.82 3.12A.5.5 0 0 0 3 3.5z"></path><path d="M15.5 12l3.87-3.17-6.2-3.58L15.5 12z" fill-opacity=".7"></path><path d="M15.5 12l-2.33 6.75 6.2-3.58L15.5 12z" fill-opacity=".85"></path></svg>
+      Baixar na Play Store
+    </a>
     <div class="cover-facts">
       <div><div class="k">Para quem</div><div class="v">Quem participa dos eventos</div></div>
       <div><div class="k">Cadastro</div><div class="v">Como "Fã", com e-mail ou Google</div></div>
@@ -246,7 +260,7 @@
         <h2><span class="idx">01</span>Criar sua conta</h2>
         <p class="lede">Leva menos de um minuto e não pede cartão.</p>
         <div class="steps">
-          <div class="step"><div class="step-num"></div><div><h4>Baixe o app Fã</h4><p>Disponível na Play Store. Também dá para usar pelo navegador, no site do app.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Baixe o app Fã</h4><p>Disponível na <a href="https://play.google.com/store/apps/details?id=com.samba.pagode.fan" target="_blank" rel="noopener">Play Store</a>. Também dá para usar pelo navegador, no site do app.</p></div></div>
           <div class="step"><div class="step-num"></div><div><h4>Cadastre-se</h4><p>Com e-mail e senha ou em um toque com sua conta Google.</p></div></div>
           <div class="step"><div class="step-num"></div><div><h4>Escolha o perfil "Fã"</h4><p>É essa opção que libera busca de eventos, compra de ingressos e o feed. (Artistas e Espaços têm cadastros próprios — veja os outros guias.)</p></div></div>
           <div class="step"><div class="step-num"></div><div><h4>Complete seu perfil</h4><p>Conte seus estilos musicais favoritos — é o que o app usa para recomendar eventos na tela inicial.</p></div></div>

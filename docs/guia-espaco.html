@@ -170,6 +170,16 @@
 
   footer.doc-footer{ margin-top:50px; padding:22px 0 4px; border-top:1px solid var(--border); display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; font-size:.82rem; color:var(--muted); }
   @media (prefers-reduced-motion:no-preference){ html{ scroll-behavior:smooth; } }
+
+  .store-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--accent); color:var(--accent-ink);
+    font-family:"Archivo",sans-serif; font-size:13.5px; font-weight:700;
+    padding:10px 18px; border-radius:999px; text-decoration:none;
+    box-shadow:var(--shadow); margin:2px 0 22px;
+  }
+  .store-btn:hover{ opacity:.9; }
+  .store-btn svg{ flex-shrink:0; }
 </style>
 
 <div class="page">
@@ -178,6 +188,10 @@
     <span class="stub-corner"><span class="dot"></span>SAMBAP · App Espaço</span>
     <h1>Guia do Espaço</h1>
     <p class="tagline">Como cadastrar sua casa de samba e pagode, colocar artistas na agenda, vender ingresso dentro do app e acompanhar o caixa — do cadastro ao saque.</p>
+    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.samba.pagode.venue" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3.5v17a.5.5 0 0 0 .82.38l10.36-8.5a.5.5 0 0 0 0-.76L3.82 3.12A.5.5 0 0 0 3 3.5z"></path><path d="M15.5 12l3.87-3.17-6.2-3.58L15.5 12z" fill-opacity=".7"></path><path d="M15.5 12l-2.33 6.75 6.2-3.58L15.5 12z" fill-opacity=".85"></path></svg>
+      Baixar na Play Store
+    </a>
     <div class="cover-facts">
       <div><div class="k">Para quem</div><div class="v">Casas de show e estabelecimentos</div></div>
       <div><div class="k">Cadastro</div><div class="v">Como "Espaço", com e-mail ou Google</div></div>
@@ -207,7 +221,7 @@
       <section id="cadastro">
         <h2><span class="idx">01</span>Criar seu perfil de Espaço</h2>
         <div class="steps">
-          <div class="step"><div class="step-num"></div><div><h4>Baixe o app Espaço</h4><p>Versão própria na Play Store, separada dos apps de Fã e Artista.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Baixe o app Espaço</h4><p>Versão própria na <a href="https://play.google.com/store/apps/details?id=com.samba.pagode.venue" target="_blank" rel="noopener">Play Store</a>, separada dos apps de Fã e Artista.</p></div></div>
           <div class="step"><div class="step-num"></div><div><h4>Cadastre-se como "Espaço"</h4><p>Com e-mail e senha ou com sua conta Google.</p></div></div>
           <div class="step"><div class="step-num"></div><div><h4>Preencha nome, foto e endereço</h4><p>O endereço cadastrado aqui é o que preenche automaticamente os eventos que artistas criarem no seu local.</p></div></div>
         </div>
