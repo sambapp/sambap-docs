@@ -13,9 +13,9 @@ Não contém código-fonte do aplicativo.
 
 ## URLs (após publicar)
 
-- Site: `https://appsambadaprimeira-glitch.github.io/sambap-docs/`
-- Política de Privacidade: `https://appsambadaprimeira-glitch.github.io/sambap-docs/privacy.html`
-- Termos de Uso: `https://appsambadaprimeira-glitch.github.io/sambap-docs/terms.html`
-- Guia do Fã: `https://appsambadaprimeira-glitch.github.io/sambap-docs/guia-fa.html`
-- Guia do Artista: `https://appsambadaprimeira-glitch.github.io/sambap-docs/guia-artista.html`
-- Guia do Espaço: `https://appsambadaprimeira-glitch.github.io/sambap-docs/guia-espaco.html`
+- Site: `https://sambapp.github.io/sambap-docs/`
+- Política de Privacidade: `https://sambapp.github.io/sambap-docs/privacy.html`
+- Termos de Uso: `https://sambapp.github.io/sambap-docs/terms.html`
+- Guia do Fã: `https://sambapp.github.io/sambap-docs/guia-fa.html`
+- Guia do Artista: `https://sambapp.github.io/sambap-docs/guia-artista.html`
+- Guia do Espaço: `https://sambapp.github.io/sambap-docs/guia-espaco.html`
