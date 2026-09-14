@@ -1,6 +1,6 @@
-# Samba da 1ª — Site legal (Play Console)
+# SAMBAP — Site legal (Play Console)
 
-Repositório **público** apenas com páginas legais do app Sambapp.
+Repositório **público** apenas com páginas legais do app SAMBAP.
 
 Não contém código-fonte do aplicativo.
 
@@ -13,9 +13,9 @@ Não contém código-fonte do aplicativo.
 
 ## URLs (após publicar)
 
-- Site: `https://appsambadaprimeira-glitch.github.io/sambada1a-legal/`
-- Política de Privacidade: `https://appsambadaprimeira-glitch.github.io/sambada1a-legal/privacy.html`
-- Termos de Uso: `https://appsambadaprimeira-glitch.github.io/sambada1a-legal/terms.html`
-- Guia do Fã: `https://appsambadaprimeira-glitch.github.io/sambada1a-legal/guia-fa.html`
-- Guia do Artista: `https://appsambadaprimeira-glitch.github.io/sambada1a-legal/guia-artista.html`
-- Guia do Espaço: `https://appsambadaprimeira-glitch.github.io/sambada1a-legal/guia-espaco.html`
+- Site: `https://appsambadaprimeira-glitch.github.io/sambap-docs/`
+- Política de Privacidade: `https://appsambadaprimeira-glitch.github.io/sambap-docs/privacy.html`
+- Termos de Uso: `https://appsambadaprimeira-glitch.github.io/sambap-docs/terms.html`
+- Guia do Fã: `https://appsambadaprimeira-glitch.github.io/sambap-docs/guia-fa.html`
+- Guia do Artista: `https://appsambadaprimeira-glitch.github.io/sambap-docs/guia-artista.html`
+- Guia do Espaço: `https://appsambadaprimeira-glitch.github.io/sambap-docs/guia-espaco.html`
