@@ -230,23 +230,30 @@
 
       <section id="eventos">
         <h2><span class="idx">02</span>Criar um evento</h2>
-        <p class="lede">Ao contrário do artista, o Espaço já monta o evento com line-up.</p>
+        <p class="lede">Ao contrário do artista, o Espaço não preenche endereço nem espera aprovação — usa o endereço já cadastrado no seu perfil e publica na hora.</p>
         <div class="steps">
-          <div class="step"><div class="step-num"></div><div><h4>Dados básicos</h4><p>Título, data ou dias recorrentes, horário e gênero (Samba, Pagode e outros).</p></div></div>
-          <div class="step"><div class="step-num"></div><div><h4>Escale os artistas</h4><p>Adicione até <strong>10 artistas</strong> cadastrados ao line-up do evento.</p></div></div>
-          <div class="step"><div class="step-num"></div><div><h4>Defina se é gratuito ou pago</h4><p>Se for pago, o preço mínimo não pode ficar abaixo do ingresso mais barato que você configurar.</p></div></div>
-          <div class="step"><div class="step-num"></div><div><h4>Publique</h4><p>O evento entra na busca, nas recomendações e na agenda do seu perfil.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Título e descrição</h4><p>Título (mínimo 3 caracteres, precisa ser único), descrição, restrições do local (ex.: "proibido garrafa de vidro") e um link externo do evento — os três últimos são opcionais.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Quando: data única, recorrente ou multi-dia</h4><p>Uma <strong>data + horário</strong> (mínimo 1 hora no futuro), ou <strong>Evento Recorrente</strong> (um ou mais dias da semana fixos, com data de término opcional), ou <strong>Evento Multi-Dia</strong> (de 2 a 7 dias seguidos). Recorrente e Multi-Dia não se combinam.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Escale os artistas</h4><p>Campo de busca com autocompletar (a partir de 2 letras) sobre artistas cadastrados no app. Cada resultado escolhido vira um chip na lista — adicione até <strong>10 artistas</strong> ao line-up; ao atingir o limite, o campo de busca some.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Gênero</h4><p>Samba e Pagode em destaque como atalho, ou toque em "Outros gêneros" para ver o menu completo.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Gratuito ou pago</h4><p>Se for pago, o preço informado aqui não pode ficar abaixo do ingresso mais barato que você configurar em Venda de Tickets (próxima seção) — é essa venda que efetivamente cobra o fã, não este campo.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Imagem e publicação</h4><p>Foto ou vídeo de capa (até 50MB, formato recomendado 1200×630px). Publique — o evento entra direto na busca, nas recomendações e na agenda do seu perfil, sem espera.</p></div></div>
         </div>
         <div class="note"><strong>Evento criado por um artista no seu endereço?</strong> Ele chega para você como <em>pendente de aprovação</em> — confira o line-up e os dados antes de aprovar, para manter sua agenda sem conflito de datas.</div>
       </section>
 
       <section id="ingressos">
         <h2><span class="idx">03</span>Vender ingressos dentro do app</h2>
-        <p class="lede">Recurso exclusivo do plano <strong>Business</strong> — a venda de ingressos é a única forma de receber pagamento de ticket direto pela plataforma.</p>
+        <p class="lede">Recurso exclusivo do plano <strong>Business</strong> — a venda de ingressos é a única forma de receber pagamento de ticket direto pela plataforma. Configure em "Venda de Tickets", dentro da criação ou edição do evento.</p>
+        <div class="steps">
+          <div class="step"><div class="step-num"></div><div><h4>Habilite a venda</h4><p>O interruptor "Habilitar venda de tickets" precisa estar ligado — sem ele, o resto da tela nem aparece.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Janela de vendas e reembolso</h4><p>Data e horário de início e fim das vendas (em eventos recorrentes isso não se aplica — a venda fica sempre aberta). Defina também o prazo limite para pedido de reembolso, no máximo até 1 hora antes do evento começar, além dos termos e da política de reembolso em texto livre.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Pré-venda (opcional)</h4><p>Ligue "Habilitar pré-venda" e defina data/horário de início e fim, com preço e quantidade próprios — diferentes do lote normal. A pré-venda precisa terminar antes (ou junto) do início da venda normal.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Tickets unificados (eventos multi-dia)</h4><p>Em vez de vender um ingresso por dia, ative "Habilitar tickets unificados" para criar um tipo de ticket único, válido para todos os dias do evento — com sua própria janela de vendas e pré-venda.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Tipos de ingresso (lotes)</h4><p>Adicione quantos tipos quiser — Pista, VIP, Camarote etc. — cada um com <strong>nome</strong>, <strong>preço</strong>, <strong>quantidade</strong> total, <strong>máximo por comprador</strong> (opcional, sem limite se deixado em branco) e descrição dos benefícios. Em evento recorrente ou multi-dia sem tickets unificados, você repete essa configuração para cada dia da semana ou cada data — cada dia precisa de pelo menos um tipo de ingresso antes de salvar.</p></div></div>
+        </div>
         <div class="cards">
-          <div class="card"><h4>🎟️ Tipos e lotes</h4><p>Configure categorias de ingresso, quantidade e preço por lote.</p></div>
-          <div class="card"><h4>🚀 Pré-venda configurável</h4><p>Defina datas, preços e lotes específicos para quem compra antecipado.</p></div>
-          <div class="card"><h4>💳 Pagamento</h4><p>O fã paga por PIX, cartão de crédito, débito ou boleto — o crédito cai no seu saldo do app.</p></div>
+          <div class="card"><h4>💳 Pagamento</h4><p>O fã paga por PIX, cartão de crédito, débito ou boleto — o crédito cai no seu saldo do app, descontada a taxa de 10%.</p></div>
           <div class="card"><h4>📷 QR Code manual</h4><p>Gere QR Codes avulsos para entradas combinadas fora do fluxo padrão de compra.</p></div>
         </div>
         <p>Sem o plano Business, o evento pode ser divulgado com um valor de entrada informativo, mas a cobrança e o crédito automático em conta não ficam disponíveis — é preciso assinar o Business para ativar.</p>
@@ -263,7 +270,18 @@
             </tbody>
           </table>
         </div>
-        <p>Ao resgatar um modelo de cupom percentual, você pode ajustar o desconto — nunca abaixo de <strong>5%</strong>, para o cupom continuar valendo a pena para quem usa.</p>
+
+        <h3>Resgatar um tipo de cupom</h3>
+        <div class="steps">
+          <div class="step"><div class="step-num"></div><div><h4>Escolha um modelo</h4><p>Toque em "Resgatar Tipo", escolha a categoria (entrada, bebida, combo etc.) e depois o modelo — desconto percentual, valor fixo, cortesia ou ingresso grátis.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Ajuste o percentual (se aplicável)</h4><p>Em modelos percentuais, você pode alterar o desconto — nunca abaixo de <strong>5%</strong>, para o cupom continuar valendo a pena para quem usa. Valor fixo e cortesias vêm com valor travado do modelo.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Defina validade e limites de uso</h4><p>Data de validade (padrão: 30 dias), limite total de usos (padrão 100, de 1 a 10.000) e limite de usos por pessoa (padrão 1, de 1 a 10).</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h4>Resgate</h4><p>O cupom entra na sua lista de "Cupons Disponíveis", pronto para aplicar a um evento.</p></div></div>
+        </div>
+
+        <h3>Aplicar o cupom a um evento</h3>
+        <p>Dentro do evento (pago — não é possível vincular cupom a evento gratuito), abra o gerenciador de cupons e toque em "Aplicar" no cupom desejado. Só um cupom de <strong>entrada</strong> (nome ou descrição com "entrada", "ingresso" ou "ticket") pode estar aplicado por evento — os demais tipos (bebida, combo etc.) não têm essa restrição.</p>
+        <div class="note"><strong>Sem código para o fã digitar:</strong> se o cupom for do tipo ingresso, ele aparece sozinho como uma promoção na página do evento e o desconto entra automaticamente no checkout — não precisa QR Code nem código. Cupons de bebida, combo ou cortesia funcionam diferente: o fã leva o QR Code do cupom dele até o balcão, e você usa o <strong>Scanner de QR Code</strong> para validar.</div>
       </section>
 
       <section id="checkin">
@@ -323,7 +341,8 @@
             </ul>
           </div>
         </div>
-        <div class="note">Assinaturas com período de teste incluem <strong>7 dias grátis</strong> antes da primeira cobrança. Tem um código promocional? Resgate pelo <strong>Scanner de QR Code</strong>.</div
+        <div class="note">Assinaturas com período de teste incluem <strong>7 dias grátis</strong> antes da primeira cobrança.</div>
+        <div class="note">Tem um código promocional de assinatura? Resgate pelo <strong>Scanner de QR Code</strong> — ele concede meses extras (ou desconto) na sua assinatura e pode ser usado a qualquer momento, não só durante o período de teste.</div>
       </section>
 
       <section id="restricoes">
